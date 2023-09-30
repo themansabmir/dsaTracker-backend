@@ -18,9 +18,7 @@ db.on("connected", () => {
 });
 app.use(cors());
 
-app.get("/", (req, res) => {
-  res.send("home page path");
-});
+
 
 app.use("/api/auth", require("./auth"), require("./Routes/dsaRoutes"));
 app.use("/api", require("./Routes/userRoutes"));
